@@ -77,5 +77,6 @@ api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        checker=verify
+        checker=verify,
+        function_name="winning_die"
     ).on_ready)
