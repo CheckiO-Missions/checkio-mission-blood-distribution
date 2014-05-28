@@ -18,17 +18,15 @@
     To prepare for this game, you're investigating different ways of picking the numbers.
     To do this, write a program that will take an opponent's die
     and output some die that will win against it more than half the time.
-     If no die satisfies the task requirements, return an empty list.
+    If no die satisfies the task requirements, return an empty list.
 </p>
 
 <p>
-    <strong>Input:</strong> 
-    A sorted list of integers, one for each face of the opponent's die.
+    <strong>Input:</strong> An enemy's die as a sorted list of integers, one for each face of the opponent's die.
 </p>
 
 <p>
-    <strong>Output:</strong> 
-    A list of integers, one for each face of your die.
+    <strong>Output:</strong> Your die as a list of integers, one for each face of your die or an empty list.
 </p>
 
 <p>
@@ -41,6 +39,7 @@ checkio([2, 2, 5, 5, 5, 5]) == [3, 3, 3, 3, 6, 6]
 checkio([1, 1, 3]) == [1, 2, 2]
 checkio([1, 2, 3, 4, 5, 6]) == [] # Any 6-sided die totaling 21 has a 50/50 chance of winning against the standard die.
 checkio([2, 3, 4, 5, 6, 7]) == [1, 1, 3, 7, 7, 8] # This can be beat though.
+checkio([1, 2, 3, 4, 5, 6]) == []
 </pre>
 
 <p class="for_info_only">

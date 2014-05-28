@@ -17,4 +17,4 @@ if __name__ == '__main__':
     assert test_dice([3, 3, 3, 3, 6, 6]), "Threes and Sixes"
     assert test_dice([4, 4, 4, 4, 4, 4]), "All Fours"
     assert test_dice([1, 1, 1, 4]), "Unities and Four"
-    assert checkio([1, 2, 3, 4, 5, 6]) == [], "All in row"
+    assert checkio([1, 2, 3, 4, 5, 6]) == [], "All in row -- No die"
