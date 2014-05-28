@@ -96,7 +96,7 @@ TESTS = {
     ]
 }
 
-for i in range(0,10):
+for i in range(0, 10):
     sides = random.randint(3, 10)
     die = list(sorted([random.randint(3, 10) for x in range(0, sides)]))
     TESTS["Random"].append({"input": die, "answer": (die, True)})
