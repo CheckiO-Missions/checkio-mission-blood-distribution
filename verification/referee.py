@@ -32,6 +32,7 @@ from checkio.referees.io import CheckiOReferee
 
 from tests import TESTS
 
+
 def verify(enemy, player):
     if player == []:
         if enemy[1]:
@@ -71,9 +72,11 @@ def verify(enemy, player):
     else:
         return False, "This is a loss. You need to find a die that can win."
 
+
 api.add_listener(
     ON_CONNECT,
     CheckiOReferee(
         tests=TESTS,
-        checker=verify
+        checker=verify,
+        function_name="winning_die"
     ).on_ready)

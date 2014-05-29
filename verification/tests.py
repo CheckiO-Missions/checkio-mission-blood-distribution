@@ -10,7 +10,7 @@ Each test is dict with
 import random
 
 TESTS = {
-    "Basics": [
+    "0. Basics": [
         {
             "input": [3, 3, 3, 3, 6, 6],
             "answer": ([3, 3, 3, 3, 6, 6], True)
@@ -36,7 +36,7 @@ TESTS = {
             "answer": ([2, 3, 4, 5, 6, 7], True)
         }
     ],
-    "Small": [
+    "1. Small": [
         {
             "input": [1, 1, 1],
             "answer": ([1, 1, 1], False)
@@ -66,7 +66,7 @@ TESTS = {
             "answer": ([4, 4, 4], True)
         }
     ],
-    "Big": [
+    "2. Big": [
         {
             "input": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
             "answer": ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], False)
@@ -92,11 +92,11 @@ TESTS = {
             "answer": ([2, 4, 6, 8, 10, 12, 14, 16, 18], False)
         }
     ],
-    "Random": [
+    "3. Random": [
     ]
 }
 
-for i in range(0,10):
+for i in range(0, 10):
     sides = random.randint(3, 10)
     die = list(sorted([random.randint(3, 10) for x in range(0, sides)]))
     TESTS["Random"].append({"input": die, "answer": (die, True)})
