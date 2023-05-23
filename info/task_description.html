@@ -1,34 +1,40 @@
+
 <p>
-    For this task, you're <i>going</i> to play a dice game, but first you must prepare for an overwhelming victory.
-    The game itself is very simple.
-    Both players roll a single die and whoever rolls highest scores a point. 
-    (On a tie, both players must reroll until someone scores.)
+In this mission, you will be tasked with distributing available blood of different types to patients in need of transfusions.
+  Each blood type has compatibility restrictions for both donation and reception of blood.
+  You will be provided with the quantities of available blood for each type and the blood needs for each type of patient.
+  Your goal is to calculate the appropriate amount of blood to allocate to each type, while respecting the compatibility restrictions, in order to meet the patients' needs as efficiently as possible.
 </p>
-    
+<div>
+  <h3>Compatibility Restrictions</h3>
+  <ul>
+    <li>Blood type A can donate to blood types A and AB.</li>
+    <li>Blood type B can donate to blood types B and AB.</li>
+    <li>Blood type AB can only donate to blood type AB.</li>
+    <li>Blood type O can donate to blood types A, B, AB, and O (universal donor).</li>
+    <li>Blood type A can only receive from blood types A and O.</li>
+    <li>Blood type B can only receive from blood types B and O.</li>
+    <li>Blood type AB can receive from all blood types (universal recipient).</li>
+    <li>Blood type O can only receive from blood type O.</li>
+  </ul>
+</div>
+
 <p>
-    These aren't standard dice however.
-    Each player can put any positive number on any side of the die as long as the number of sides match
-    and the total of all the chosen numbers are the same.
-    For example, one player might use a six sided die with the numbers [3, 3, 3, 3, 6, 6]
-    while the other player uses a six sided die with the numbers [4, 4, 4, 4, 4, 4].
-    The interesting part of this game is that even with the same number of sides and the same total,
-    different dice have different chances of winning. Using the example die, the player with all 4's will win 2/3 of the time.
+You need to implement the function distribute_blood(blood_avail, blood_needs), which takes two dictionaries as arguments.
+  The first dictionary, blood_avail, contains the available blood quantities for each blood type, where the keys are the blood types and the values are the available quantities.
+  The second dictionary, blood_needs, contains the blood needs for each blood type, where the keys are the blood types and the values are the required quantities.
+
+Your task is to calculate the optimal distribution of blood, considering the compatibility restrictions and the availability of blood. Determine the proportion of available blood for each type relative to the total available blood. Then, multiply this proportion by the needs for each blood type, making sure to respect the compatibility restrictions when assigning the blood.
+Finally, return a dictionary where the keys are the blood types and the values are the assigned quantities of blood.
+</p>
+
+
+<p>
+    <strong>Input:</strong> The blood quantities and the blood needs for each blood type.
 </p>
 
 <p>
-
-    To prepare for this game, you're investigating different ways of picking the numbers.
-    To do this, write a program that will take an opponent's die
-    and output some die which will win against it more than half the time.
-    If no die satisfies the task requirements, return an empty list.
-</p>
-
-<p>
-    <strong>Input:</strong> An enemy's die as a sorted list of integers, one for each face of the opponent's die.
-</p>
-
-<p>
-    <strong>Output:</strong> Your die as a list of integers, one for each face of your die or an empty list.
+    <strong>Output:</strong> The output will be the distribution of blood quantities for each blood type.
 </p>
 
 <p>
