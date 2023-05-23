@@ -16,87 +16,65 @@ TESTS = {
             "answer": ([3, 3, 3, 3, 6, 6], True)
         },
         {
-            "input": [4, 4, 4, 4, 4, 4],
-            "answer": ([4, 4, 4, 4, 4, 4], True)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [2, 2, 5, 5, 5, 5],
-            "answer": ([2, 2, 5, 5, 5, 5], True)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [1, 1, 1, 4],
-            "answer": ([1, 1, 1, 4], True)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [1, 2, 3, 4, 5, 6],
-            "answer": ([1, 2, 3, 4, 5, 6], False)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [2, 3, 4, 5, 6, 7],
-            "answer": ([2, 3, 4, 5, 6, 7], True)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         }
     ],
     "1. Small": [
         {
-            "input": [1, 1, 1],
-            "answer": ([1, 1, 1], False)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [1, 1, 2],
-            "answer": ([1, 1, 2], False)
-        },
-        {
-            "input": [1, 1, 3],
-            "answer": ([1, 1, 3], True)
-        },
-        {
-            "input": [2, 2, 2],
-            "answer": ([2, 2, 2], False)
-        },
-        {
-            "input": [2, 3, 4],
-            "answer": ([2, 3, 4], True)
-        },
-        {
-            "input": [3, 3, 3],
-            "answer": ([3, 3, 3], True)
-        },
-        {
-            "input": [4, 4, 4],
-            "answer": ([4, 4, 4], True)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         }
+
     ],
     "2. Big": [
         {
-            "input": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-            "answer": ([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], False)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-            "answer": ([1, 1, 1, 1, 1, 1, 1, 1, 1, 1], False)
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
-        {
-            "input": [1, 1, 1, 2, 2, 2, 3, 3, 3, 4],
-            "answer": ([1, 1, 1, 2, 2, 2, 3, 3, 3, 4], True)
-        },
-        {
-            "input": [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
-            "answer": ([10, 10, 10, 10, 10, 10, 10, 10, 10, 10], True)
-        },
-        {
-            "input": [1, 5, 5, 5, 5, 6, 6, 6, 6, 10],
-            "answer": ([1, 5, 5, 5, 5, 6, 6, 6, 6, 10], True)
-        },
-        {
-            "input": [2, 4, 6, 8, 10, 12, 14, 16, 18],
-            "answer": ([2, 4, 6, 8, 10, 12, 14, 16, 18], False)
-        }
-    ],
-    "3. Random": [
+
     ]
 }
 
-for i in range(0, 10):
-    sides = random.randint(3, 10)
-    die = list(sorted([random.randint(3, 10) for x in range(0, sides)]))
-    TESTS["3. Random"].append({"input": die, "answer": (die, True)})
