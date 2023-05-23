@@ -1,4 +1,4 @@
-def distribute_blood(blood_avail, blood_needs)
+def distribute_blood(blood_avail, blood_needs):
     return {}
 
 if __name__ == '__main__':
