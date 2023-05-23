@@ -7,8 +7,6 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-import random
-
 TESTS = {
     "0. Basics": [
         {
