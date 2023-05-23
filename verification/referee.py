@@ -33,7 +33,7 @@ from checkio.referees.io import CheckiOReferee
 from tests import TESTS
 
 
-def verify(blood_avail, blood_needs, function):
+def verify(blood_avail, blood_needs, function): 
     blood_types = ['A', 'B', 'AB', 'O']
     distribution = function(blood_avail, blood_needs)
     
@@ -63,7 +63,7 @@ def verify(blood_avail, blood_needs, function):
                     if distribution[blood_type][target_type] > 0:
                         return False
     
-    return True
+    return True 
 
 
 
