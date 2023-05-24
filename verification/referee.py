@@ -33,7 +33,8 @@ from checkio.referees.io import CheckiOReferee
 from tests import TESTS
 
 
-def verify(blood_avail, blood_needs, function):
+def verify(answer, function):
+    blood_avail, blood_needs = answer
     blood_types = ['A', 'B', 'AB', 'O']
     distribution = function(blood_avail, blood_needs)
     
