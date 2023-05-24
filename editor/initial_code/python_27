@@ -1,5 +1,5 @@
 def distribute_blood(blood_avail, blood_needs):
-    return {}
+    return ''
 
 if __name__ == '__main__':
     #These are only used for self-checking and not necessary for auto-testing
