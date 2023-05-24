@@ -41,7 +41,14 @@ Finally, return a dictionary where the keys are the blood types and the values a
     <strong>Example:</strong>
 </p>
 <pre class="brush: python">
-distribute_blood([3, 3, 3, 3, 6, 6]) == [4, 4, 4, 4, 4, 4] # Or [3, 3, 4, 4, 5, 5]
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == {
+  'A': {'A': 30, 'B': 0, 'AB': 0, 'O': 0},
+  'B': {'A': 0, 'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0, 'B': 0, 'AB': 30, 'O': 0},
+  'O': {'A': 0, 'B': 0, 'AB': 0, 'O': 60}
+}
+
+blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ) == [4, 4, 4, 4, 4, 4] # Or [3, 3, 4, 4, 5, 5]
 distribute_blood([4, 4, 4, 4, 4, 4]) == [2, 2, 5, 5, 5, 5] # Or [5, 5, 2, 2, 5, 5]
 distribute_blood([2, 2, 5, 5, 5, 5]) == [3, 3, 3, 3, 6, 6]
 
