@@ -9,10 +9,7 @@ Each test is dict with
 
 TESTS = {
     "0. Basics": [
-        {
-            "input": [3, 3, 3, 3, 6, 6],
-            "answer": ([3, 3, 3, 3, 6, 6], True)
-        },
+
         {
             "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
 blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
