@@ -33,37 +33,34 @@ from checkio.referees.io import CheckiOReferee
 from tests import TESTS
 
 
-def verify(blood_avail, blood_needs, function): 
+def verify(blood_avail, blood_needs, function):
     blood_types = ['A', 'B', 'AB', 'O']
     distribution = function(blood_avail, blood_needs)
     
     for blood_type in blood_types:
         used_blood = sum(distribution[blood_type].values())
-        if used_blood != blood_avail[blood_type]:
+        if used_blood > blood_avail[blood_type]:
             return False
         
         for target_type in blood_types:
             if blood_type == 'A':
                 if target_type not in ['A', 'AB']:
-                    if distribution[blood_type][target_type] > 0:
+                    if distribution[blood_type][target_type] > blood_needs[target_type]:
                         return False
             elif blood_type == 'B':
                 if target_type not in ['B', 'AB']:
-                    if distribution[blood_type][target_type] > 0:
+                    if distribution[blood_type][target_type] > blood_needs[target_type]:
                         return False
             elif blood_type == 'AB':
                 if target_type != 'AB':
-                    if distribution[blood_type][target_type] > 0:
+                    if distribution[blood_type][target_type] > blood_needs[target_type]:
                         return False
             elif blood_type == 'O':
-                if distribution[blood_type][target_type] > 0:
-                    if target_type not in ['A', 'B', 'AB', 'O']:
-                        return False
-                if target_type == 'O':
-                    if distribution[blood_type][target_type] > 0:
-                        return False
+                if distribution[blood_type][target_type] > blood_needs[target_type]:
+                    return False
     
-    return True 
+    return True
+
 
 
 
