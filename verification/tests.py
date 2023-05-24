@@ -11,9 +11,9 @@ TESTS = {
     "0. Basics": [
 
         {
-            "input": [blood_available = {'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
 blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": [blood_available = {'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
 blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
