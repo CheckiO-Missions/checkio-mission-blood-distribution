@@ -5,7 +5,7 @@ if __name__ == '__main__':
     #These are only used for self-checking and not necessary for auto-testing
     def check_solution(blood_avail, blood_needs, function):
         blood_types = ['A', 'B', 'AB', 'O']
-        distribution = function(blood_avail, blood_needs)
+        distribution = function(blood_avail, distribute_blood)
 
         for blood_type in blood_types:
             used_blood = sum(distribution[blood_type].values())
