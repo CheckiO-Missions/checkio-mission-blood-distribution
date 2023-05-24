@@ -11,64 +11,64 @@ TESTS = {
     "0. Basics": [
 
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         }
     ],
     "1. Small": [
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         }
 
     ],
     "2. Big": [
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
         },
         {
-            "input": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
-            "answer": blood_available = [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
-blood_needs = {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
-        },
+            "input":  [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+{'A': 30, 'B': 40, 'AB': 20, 'O': 60}] ,
+            "answer": [{'A': 120, 'B': 80, 'AB': 50, 'O': 100},
+ {'A': 30, 'B': 40, 'AB': 20, 'O': 60}] 
+        }
 
     ]
 }
