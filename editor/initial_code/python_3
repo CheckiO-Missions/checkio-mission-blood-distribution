@@ -37,8 +37,8 @@ if __name__ == '__main__':
 
 
     assert check_solution({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood)
+     distribute_blood({'A': 120, 'B': 40, 'AB': 20, 'O': 90},{'A': 150, 'B': 40, 'AB': 20, 'O': 60}))
      
     assert check_solution({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood)
+     distribute_blood({'A': 120, 'B': 40, 'AB': 20, 'O': 90},{'A': 150, 'B': 40, 'AB': 20, 'O': 60}))
 
