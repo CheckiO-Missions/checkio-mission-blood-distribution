@@ -71,5 +71,5 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         checker=verify,
-        function_name="distribute_blood"
+        function_name=distribute_blood
     ).on_ready)
