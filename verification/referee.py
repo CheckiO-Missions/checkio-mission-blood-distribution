@@ -32,9 +32,6 @@ from checkio.referees.io import CheckiOReferee
 
 from tests import TESTS
 
-def verify():
-    return True
-'''
 def verify(answ, function):
     blood_avail, blood_needs = answ[0][0], answ[0][1]
     blood_types = ['A', 'B', 'AB', 'O']
@@ -66,7 +63,7 @@ def verify(answ, function):
 
     return True
 
-    '''
+
 
 
 api.add_listener(
@@ -74,5 +71,5 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         checker=verify,
-        function_name="winning_die"
+        function_name="distribute_blood"
     ).on_ready)
