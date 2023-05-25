@@ -36,7 +36,7 @@ from tests import TESTS
 def verify(answ, function):
     blood_avail, blood_needs = answ[0], answ[1]
     blood_types = ['A', 'B', 'AB', 'O']
-    distribution = function( blood_avail, blood_needs) 
+    distribution = function(answ) 
 
     
     for blood_type in blood_types:
