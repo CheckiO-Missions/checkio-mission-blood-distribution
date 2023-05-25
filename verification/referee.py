@@ -33,7 +33,7 @@ from checkio.referees.io import CheckiOReferee
 from tests import TESTS
 
 def verify(answ, solution):
-    blood_avail, blood_needs = answ[0], answ[1]
+    blood_avail, blood_needs = answ
     blood_types = ['A', 'B', 'AB', 'O']
     distribution = solution
 
