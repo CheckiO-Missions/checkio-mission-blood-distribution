@@ -29,7 +29,7 @@ checkio.referee.cover_codes
 from checkio.signals import ON_CONNECT
 from checkio import api
 from checkio.referees.io import CheckiOReferee
-from checkio.referees import cover_codes
+from checkio.referees.cover_codes import unwrap_args
 
 from tests import TESTS
 
@@ -74,7 +74,8 @@ api.add_listener(
         checker=verify,
         function_name="distribute_blood",
          cover_code={
-            'python-3': cover_codes.unwrap_args,
+            'python-27': unwrap_args,
+            'python-3': unwrap_args
          
         }
           ).on_ready)
