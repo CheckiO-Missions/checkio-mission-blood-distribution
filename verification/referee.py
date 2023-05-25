@@ -34,7 +34,7 @@ from checkio.referees.cover_codes import unwrap_args
 from tests import TESTS
 
 def verify(answ, distribution):
-    blood_avail, blood_needs = answ[0], answ[1]
+    blood_avail, blood_needs = answ
     blood_types = ['A', 'B', 'AB', 'O']
 
     
