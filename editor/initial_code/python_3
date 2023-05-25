@@ -6,7 +6,8 @@ def distribute_blood(blood_avail, blood_needs):
 
 if __name__ == '__main__':
     #These are only used for self-checking and not necessary for auto-testing
-    def verify(blood_avail, blood_needs, user_result):
+    def verify(blood_avail, blood_needs, func):
+        user_result = func(blood_avail, blood_needs)
         blood_types = ['A', 'B', 'AB', 'O']
         distribution = user_result
 
@@ -36,9 +37,7 @@ if __name__ == '__main__':
 
 
 
-    assert verify({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood({'A': 120, 'B': 40, 'AB': 20, 'O': 90},{'A': 150, 'B': 40, 'AB': 20, 'O': 60}))
-     
-    assert verify({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood({'A': 120, 'B': 40, 'AB': 20, 'O': 90},{'A': 150, 'B': 40, 'AB': 20, 'O': 60}))
+    assert verify({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60}, distribute_blood)
+    assert verify({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60}, distribute_blood)
+
 
