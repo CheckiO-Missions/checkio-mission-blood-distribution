@@ -32,6 +32,21 @@ Finally, return a dictionary where the keys are the blood types and the values a
 <p>
     <strong>Input:</strong> The blood quantities and the blood needs for each blood type.
 </p>
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 0,  'O': 0},
+   'B': {'A': 0,  'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 0,  'AB': 0, 'O': 60}
+}
+
+distribute_blood({'A': 40, 'B': 30, 'AB': 30, 'O': 40}, {'A': 30, 'B': 35, 'AB': 45, 'O': 30}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 10, 'O': 0},
+   'B': {'A': 0,  'B': 30, 'AB': 0,  'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 5,  'AB': 5,  'O': 30}
+}
 
 <p>
     <strong>Output:</strong> The output will be the distribution of blood quantities for each blood type.
