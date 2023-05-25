@@ -6,7 +6,7 @@ def distribute_blood(blood_avail, blood_needs):
 
 if __name__ == '__main__':
     #These are only used for self-checking and not necessary for auto-testing
-    def check_solution(blood_avail, blood_needs, user_result):
+    def verify(blood_avail, blood_needs, user_result):
         blood_types = ['A', 'B', 'AB', 'O']
         distribution = user_result
 
