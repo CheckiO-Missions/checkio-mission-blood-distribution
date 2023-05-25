@@ -37,6 +37,8 @@ def verify(answ, function):
     blood_avail, blood_needs = answ[0][0], answ[0][1]
     blood_types = ['A', 'B', 'AB', 'O']
     distribution = function(blood_avail, blood_needs)
+    distribution = function(blood_avail, answ[0][1]) 
+
     
     for blood_type in blood_types:
         used_blood = sum(distribution[blood_type].values())
