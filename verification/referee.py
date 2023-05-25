@@ -71,7 +71,5 @@ api.add_listener(
     CheckiOReferee(
         tests=TESTS,
         checker=verify,
-        function_name="distribute_blood",
-           cover_code={
-            'python-3': cover_codes.unwrap_args
-        } ).on_ready)
+        function_name="distribute_blood"
+          ).on_ready)
