@@ -1,11 +1,12 @@
-def distribute_blood(blood_avail, blood_needs):
+def distribute_blood(blood):
     return {  }
 
 if __name__ == '__main__':
     #These are only used for self-checking and not necessary for auto-testing
-    def check_solution(blood_avail, blood_needs, function):
+    def check_solution(blood, function):
+        blood_avail, blood_needs = blood
         blood_types = ['A', 'B', 'AB', 'O']
-        distribution = function(blood_avail, blood_needs)
+        distribution = function([blood_avail, blood_needs])
 
         for blood_type in blood_types:
             used_blood = sum(distribution[blood_type].values())
@@ -33,9 +34,8 @@ if __name__ == '__main__':
 
 
 
-    assert check_solution({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood), "Threes and Sixes"
+    assert check_solution([{'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60}],
+     distribute_blood)
      
-    assert check_solution({'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60},
-     distribute_blood), "Threes and Sixes"
-
+    assert check_solution([{'A': 120, 'B': 40, 'AB': 20, 'O': 90}, {'A': 150, 'B': 40, 'AB': 20, 'O': 60}],
+     distribute_blood)
