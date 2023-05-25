@@ -36,32 +36,29 @@ from tests import TESTS
 def verify(answ, distribution):
     blood_avail, blood_needs = answ
     blood_types = ['A', 'B', 'AB', 'O']
-
-    
     for blood_type in blood_types:
         used_blood = sum(distribution[blood_type].values())
         if used_blood > blood_avail[blood_type]:
-            return False
+            return False, f'Used more {blood_type} blood than available'
         
         for target_type in blood_types:
             if blood_type == 'A':
                 if target_type not in ['A', 'AB']:
                     if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False
+                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
             elif blood_type == 'B':
                 if target_type not in ['B', 'AB']:
                     if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False
+                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
             elif blood_type == 'AB':
                 if target_type != 'AB':
                     if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False
+                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
             elif blood_type == 'O':
                 if distribution[blood_type][target_type] > blood_needs[target_type]:
-                    return False
+                    return False, f'Target type {target_type} needs more {blood_type} blood than available'
+    return True, ""
 
-
-    return True
 
 
 
