@@ -35,11 +35,11 @@ if __name__ == "__main__":
         return True, "Success"
 
     result, message = verify(
-        {"A": 120, "B": 40, "AB": 20, "O": 90},
-        {"A": 150, "B": 40, "AB": 20, "O": 60},
+{"A": 10, "B": 0, "AB": 25, "O": 12},
+{"A": 0, "B": 0, "AB": 30, "O": 10},
         distribute_blood(
-            {"A": 120, "B": 40, "AB": 20, "O": 90},
-            {"A": 150, "B": 40, "AB": 20, "O": 60},
+{"A": 10, "B": 0, "AB": 25, "O": 12},
+{"A": 0, "B": 0, "AB": 30, "O": 10}
         ),
     )
     assert result, message
