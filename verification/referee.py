@@ -32,32 +32,42 @@ from checkio.referees.io import CheckiOReferee
 from checkio.referees.cover_codes import unwrap_args
 
 from tests import TESTS
+def verify(blood_avail, blood_needs, user_result):
+    blood_types = ["A", "B", "AB", "O"]
+    distribution = user_result
 
-def verify(answ, distribution):
-    blood_avail, blood_needs = answ
-    blood_types = ['A', 'B', 'AB', 'O']
     for blood_type in blood_types:
         used_blood = sum(distribution[blood_type].values())
         if used_blood > blood_avail[blood_type]:
-            return False, f'Used more {blood_type} blood than available'
-        
+            return False, f"Overused blood type {blood_type}"
+
         for target_type in blood_types:
-            if blood_type == 'A':
-                if target_type not in ['A', 'AB']:
-                    if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
-            elif blood_type == 'B':
-                if target_type not in ['B', 'AB']:
-                    if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
-            elif blood_type == 'AB':
-                if target_type != 'AB':
-                    if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False, f'Target type {target_type} needs more {blood_type} blood than available'
-            elif blood_type == 'O':
+            if blood_type == "A":
+                if target_type not in ["A", "AB"]:
+                    if distribution[blood_type][target_type] > 0:
+                        return (
+                            False,
+                            f"Blood type {blood_type} is not compatible with {target_type}",
+                        )
+            elif blood_type == "B":
+                if target_type not in ["B", "AB"]:
+                    if distribution[blood_type][target_type] > 0:
+                        return (
+                            False,
+                            f"Blood type {blood_type} is not compatible with {target_type}",
+                        )
+            elif blood_type == "AB":
+                if target_type != "AB":
+                    if distribution[blood_type][target_type] > 0:
+                        return (
+                            False,
+                            f"Blood type {blood_type} is not compatible with {target_type}",
+                        )
+            elif blood_type == "O":
                 if distribution[blood_type][target_type] > blood_needs[target_type]:
-                    return False, f'Target type {target_type} needs more {blood_type} blood than available'
-    return True, ""
+                    return False, f"Overfulfilled blood type {target_type} need"
+
+    return True, "Success"
 
 
 
