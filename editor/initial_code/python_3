@@ -6,52 +6,19 @@ def distribute_blood(blood_avail, blood_needs):
     'O': {'A': 0,  'B': 0,  'AB': 0,  'O': 0} }
 
 if __name__ == "__main__":
-    def verify(blood_avail, blood_needs, user_result):
-        blood_types = ["A", "B", "AB", "O"]
-        distribution = user_result
+    assert distribute_blood({"A": 150, "B": 100, "AB": 0, "O": 0}, {"A": 100, "B": 100, "AB": 50, "O": 0}) == 
+    {  
+    'A': {'A': 100, 'B': 0,  'AB': 50, 'O': 0},
+    'B': {'A': 0,  'B': 100, 'AB': 0,  'O': 0},
+   'AB': {'A': 0,  'B': 0,  'AB': 0, 'O': 0},
+    'O': {'A': 0,  'B': 0,  'AB': 0,  'O': 0} }, "First example"
 
-        for blood_type in blood_types:
-            used_blood = sum(distribution[blood_type].values())
-            if used_blood > blood_avail[blood_type]:
-                return False, f"Overused blood type {blood_type}"
+    assert distribute_blood({"A": 10, "B": 10, "AB": 20, "O": 20}, {"A": 20, "B": 10, "AB": 30, "O": 0}) == 
+    {  
+    'A': {'A': 10, 'B': 0,  'AB': 0, 'O': 0},
+    'B': {'A': 0,  'B': 10, 'AB': 0,  'O': 0},
+   'AB': {'A': 0,  'B': 0,  'AB': 20, 'O': 0},
+    'O': {'A': 10,  'B': 0,  'AB': 10,  'O': 0} }, "Second example"
 
-            for target_type in blood_types:
-                if blood_type == "A":
-                    if target_type not in ["A", "AB"]:
-                        if distribution[blood_type][target_type] > 0:
-                            return False, f"Blood type {blood_type} is not compatible with {target_type}"
-                elif blood_type == "B":
-                    if target_type not in ["B", "AB"]:
-                        if distribution[blood_type][target_type] > 0:
-                            return False, f"Blood type {blood_type} is not compatible with {target_type}"
-                elif blood_type == "AB":
-                    if target_type != "AB":
-                        if distribution[blood_type][target_type] > 0:
-                            return False, f"Blood type {blood_type} is not compatible with {target_type}"
-                elif blood_type == "O":
-                    if distribution[blood_type][target_type] > blood_needs[target_type]:
-                        return False, f"Overfulfilled blood type {target_type} need"
-
-        return True, "Success"
-
-    result, message = verify(
-{"A": 10, "B": 0, "AB": 25, "O": 12},
-{"A": 0, "B": 0, "AB": 30, "O": 10},
-        distribute_blood(
-{"A": 10, "B": 0, "AB": 25, "O": 12},
-{"A": 0, "B": 0, "AB": 30, "O": 10}
-        ),
-    )
-    assert result, message
-
-    result, message = verify(
-        {"A": 120, "B": 40, "AB": 20, "O": 90},
-        {"A": 150, "B": 40, "AB": 20, "O": 60},
-        distribute_blood(
-            {"A": 120, "B": 40, "AB": 20, "O": 90},
-            {"A": 150, "B": 40, "AB": 20, "O": 60},
-        ),
-    )
-    assert result, message
 
 
