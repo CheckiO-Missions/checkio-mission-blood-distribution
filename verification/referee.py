@@ -72,8 +72,10 @@ def verify(answ, user_result):
     for blood_type in distribution:
         for target_type in distribution[blood_type]:
             total_transplanted_blood += distribution[blood_type][target_type]
+            
     if total_transplanted_blood < tot_used:
         return False, f"You need to use more blood"
+    
     if total_transplanted_blood > tot_used:
         return False, f"You have used blood illegaly!"    
     
