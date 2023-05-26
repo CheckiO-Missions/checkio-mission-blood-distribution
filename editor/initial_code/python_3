@@ -6,6 +6,9 @@ def distribute_blood(blood_avail, blood_needs):
     'O': {'A': 0,  'B': 0,  'AB': 0,  'O': 0} }
 
 if __name__ == "__main__":
+
+
+
     assert distribute_blood({"A": 150, "B": 100, "AB": 0, "O": 0}, {"A": 100, "B": 100, "AB": 50, "O": 0}) == 
     {  
     'A': {'A': 100, 'B': 0,  'AB': 50, 'O': 0},
