@@ -19,6 +19,6 @@ if __name__ == "__main__":
         'AB': {'A': 0,  'B': 0,  'AB': 20, 'O': 0},
         'O': {'A': 10,  'B': 0,  'AB': 10,  'O': 0}  }
 
-
+    print("Coding complete? Click 'Check' to earn cool rewards!")
 
 
