@@ -33,7 +33,7 @@ from checkio.referees.cover_codes import unwrap_args
 
 from tests import TESTS
 def verify(answ, user_result):
-    blood_avail, blood_needs = answ
+    blood_avail, blood_needs, tot_used = answ
     blood_types = ["A", "B", "AB", "O"]
     distribution = user_result
 
@@ -67,7 +67,16 @@ def verify(answ, user_result):
             elif blood_type == "O":
                 if distribution[blood_type][target_type] > blood_needs[target_type]:
                     return False, f"Overfulfilled blood type {target_type} need"
-
+                
+    total_transplanted_blood = 0
+    for blood_type in distribution:
+        for target_type in distribution[blood_type]:
+            total_transplanted_blood += distribution[blood_type][target_type]
+    if total_transplanted_blood < tot_used:
+        return False, f"You can use more blood"
+    if total_transplanted_blood > tot_used:
+        return False, f"You have used blood illegaly!"    
+    
     return True, "Success"
 
 
