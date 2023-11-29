@@ -5,22 +5,13 @@ Your mission is to distribute available blood of different types to patients req
   Your goal is to optimally allocate the available blood, respecting compatibility rules.
   Keep in mind that there could be multiple optimal solutions, those that utilize the maximum possible amount of the available blood supply.
 </p>
-<div>
-  <h3>Compatibility Restrictions</h3>
-  <ul>
-    <li>Blood type A can donate to blood types A and AB.</li>
-    <li>Blood type B can donate to blood types B and AB.</li>
-    <li>Blood type AB can only donate to blood type AB.</li>
-    <li>Blood type O can donate to blood types A, B, AB, and O (universal donor).</li>
-    <li>Blood type A can only receive from blood types A and O.</li>
-    <li>Blood type B can only receive from blood types B and O.</li>
-    <li>Blood type AB can receive from all blood types (universal recipient).</li>
-    <li>Blood type O can only receive from blood type O.</li>
-  </ul>
-</div>
+<p>Compatibility Restrictions:</p>
+<p style="text-align: center;">
+  <img  title="example" src="{{MEDIA}}blood-distr.svg" alt="example" style="max-height: 200px"/>
+</p>
 
 <p>
-You need to create a function called <strong>distribute_blood(blood_avail, blood_needs)</strong>, which takes two dictionaries.
+You need to create a function called <b>distribute_blood(blood_avail, blood_needs)</b>, which takes two dictionaries.
 </p>
 <ul>
   <li>
