@@ -1,0 +1,57 @@
+
+<p style="text-align: justify;">
+  Votre mission consiste à distribuer le sang disponible de différents types aux patients nécessitant des transfusions, en tenant compte des restrictions de compatibilité de chaque groupe sanguin.
+  Les réserves de sang ne sont pas toujours suffisantes pour répondre à toutes les demandes. On vous fournira les quantités de chaque groupe sanguin et les besoins de chaque type de patient.
+  Votre objectif est d'allouer de manière optimale le sang disponible, en respectant les règles de compatibilité.
+  Gardez à l'esprit qu'il peut y avoir plusieurs solutions optimales, c'est-à-dire celles qui utilisent le maximum possible de la réserve de sang disponible.
+</p>
+<p>Restrictions de compatibilité:</p>
+<p style="text-align: center;">
+  <img  title="example" src="{{MEDIA}}blood-distr.svg" alt="example" style="max-height: 250px"/>
+</p>
+
+<p>
+   <strong>Entrée:</strong> Les quantités de sang<em>(blood_avail</em>) et les besoins en sang<em>(blood_needs</em>) pour chaque groupe sanguin en tant que {% if is_js %}map objects{% else %}dictionaries <span>(dict)</span>{% endif %} avec des clés de type chaîne de caractères (<span>str{% if is_js %}ing{% endif %}</span>) et des valeurs entières (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+
+<p>
+   <strong>Résultat:</strong> Le résultat sera la distribution des quantités de sang pour chaque groupe sanguin sous la forme de {% if is_js %}map object of map objects{% else %}dictionary of dictionaries <span>(dict)</span>{% endif %} avec des clés de type chaîne de caractères (<span>str{% if is_js %}ing{% endif %}</span>) et des valeurs entières (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+<p>
+    <strong>Exemples:</strong>
+</p>
+<pre class="brush: python">
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 0,  'O': 0},
+   'B': {'A': 0,  'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 0,  'AB': 0, 'O': 60}
+}
+
+distribute_blood({'A': 40, 'B': 30, 'AB': 30, 'O': 40}, {'A': 30, 'B': 35, 'AB': 45, 'O': 30}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 10, 'O': 0},
+   'B': {'A': 0,  'B': 30, 'AB': 0,  'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 5,  'AB': 5,  'O': 30}
+}
+
+</pre>
+
+<p class="for_info_only" style="text-align: justify;">
+   <strong>Comment il est utilisé:</strong>
+    Cette mission se concentre sur la distribution efficace des quantités de sang disponibles pour répondre aux besoins des patients en fonction de la compatibilité.
+    La fonction `distribute_blood` calcule l'allocation de sang appropriée, en respectant les restrictions de compatibilité.
+    En effectuant cette mission, vous aurez un aperçu des algorithmes de distribution efficace du sang et de leurs applications pratiques.
+</p>
+
+
+<p class="for_info_only">
+   <strong>Conditions préalables </strong><br/> 
+    0 &le; quantités de sang;<br/>
+    0 &le; besoins en sang. 
+</p>
+
