@@ -1,0 +1,57 @@
+
+<p style="text-align: justify;">
+  Ihre Aufgabe ist es, verfügbares Blut verschiedener Blutgruppen an Patienten zu verteilen, die Transfusionen benötigen, wobei die Kompatibilitätsbeschränkungen jeder Blutgruppe zu berücksichtigen sind.
+  Der Blutvorrat reicht nicht immer aus, um alle Anforderungen zu erfüllen. Sie erhalten die Mengen der einzelnen Blutgruppen und den Bedarf der einzelnen Patienten.
+  Ihr Ziel ist es, das verfügbare Blut unter Berücksichtigung der Kompatibilitätsregeln optimal zuzuteilen.
+  Denken Sie daran, dass es mehrere optimale Lösungen geben kann, d.h. solche, die die größtmögliche Menge des verfügbaren Blutangebots nutzen.
+</p>
+<p>Kompatibilitätseinschränkungen:</p>
+<p style="text-align: center;">
+  <img  title="example" src="{{MEDIA}}blood-distr.svg" alt="example" style="max-height: 250px"/>
+</p>
+
+<p>
+   <strong>Eingabe:</strong> Die Blutmengen<em>(blood_avail</em>) und der Blutbedarf<em>(blood_needs</em>) für jede Blutgruppe als {% if is_js %}map objects{% else %}dictionaries <span>(dict)</span>{% endif %} mit String-Schlüsseln (<span>str{% if is_js %}ing{% endif %}</span>) und ganzzahligen Werten (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+
+<p>
+   <strong>Ausgabe:</strong> Die Ausgabe ist die Verteilung der Blutmengen für jede Blutgruppe als {% if is_js %}map object of map objects{% else %}dictionary of dictionaries <span>(dict)</span>{% endif %} mit String-Schlüsseln (<span>str{% if is_js %}ing{% endif %}</span>) und Ganzzahlwerten (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+<p>
+    <strong>Beispiele:</strong>
+</p>
+<pre class="brush: python">
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 0,  'O': 0},
+   'B': {'A': 0,  'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 0,  'AB': 0, 'O': 60}
+}
+
+distribute_blood({'A': 40, 'B': 30, 'AB': 30, 'O': 40}, {'A': 30, 'B': 35, 'AB': 45, 'O': 30}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 10, 'O': 0},
+   'B': {'A': 0,  'B': 30, 'AB': 0,  'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 5,  'AB': 5,  'O': 30}
+}
+
+</pre>
+
+<p class="for_info_only" style="text-align: justify;">
+   <strong>Wie es verwendet wird:</strong>
+    Bei dieser Aufgabe geht es darum, die verfügbaren Blutmengen effizient zu verteilen, um den Bedarf der Patienten auf der Grundlage der Kompatibilität zu decken.
+    Die Funktion `distribute_blood` berechnet die geeignete Blutverteilung unter Berücksichtigung von Kompatibilitätsbeschränkungen.
+    Wenn Sie diese Mission abschließen, erhalten Sie einen Einblick in effiziente Algorithmen zur Blutverteilung und deren praktische Anwendungen.
+</p>
+
+
+<p class="for_info_only">
+   <strong>Vorbedingungen</strong><br/> 
+    0 &le; Blutmengen;<br/>
+    0 &le; Blutbedarf. 
+</p>
+
