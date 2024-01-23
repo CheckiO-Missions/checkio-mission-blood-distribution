@@ -1,0 +1,57 @@
+
+<p style="text-align: justify;">
+  Państwa zadaniem jest dystrybucja dostępnej krwi różnych grup do pacjentów wymagających transfuzji, biorąc pod uwagę ograniczenia dotyczące zgodności każdej grupy krwi.
+  Zapasy krwi nie zawsze są wystarczające, aby zaspokoić wszystkie potrzeby. Otrzymają Państwo informacje na temat ilości każdej grupy krwi i potrzeb każdego pacjenta.
+  Państwa celem jest optymalne przydzielenie dostępnej krwi, z poszanowaniem zasad zgodności.
+  Proszę pamiętać, że może istnieć wiele optymalnych rozwiązań, które wykorzystują maksymalną możliwą ilość dostępnej krwi.
+</p>
+<p>Ograniczenia dotyczące zgodności:</p>
+<p style="text-align: center;">
+  <img  title="example" src="{{MEDIA}}blood-distr.svg" alt="example" style="max-height: 250px"/>
+</p>
+
+<p>
+   <strong>Dane wejściowe:</strong> Ilość krwi<em>(</em><em>blood_avail</em>) i zapotrzebowanie na krew<em>(blood_needs</em>) dla każdej grupy krwi jako obiekty mapy {% if is_js %}{% else %} słowniki <span>(dict)</span>{% endif %} z kluczami łańcuchowymi (<span>str{% if is_js %}ing{% endif %}</span>) i wartościami całkowitymi (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+
+<p>
+   <strong>Dane wyjściowe:</strong> Wynikiem będzie rozkład ilości krwi dla każdej grupy krwi jako {% if is_js %}obiekt mapy obiektów mapy{% else %}słownik słowników <span>(dict)</span>{% endif %} z kluczami łańcuchowymi (<span>str{% if is_js %}ing{% endif %}</span>) i wartościami całkowitymi (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+<p>
+    <strong>Przykłady:</strong>
+</p>
+<pre class="brush: python">
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 0,  'O': 0},
+   'B': {'A': 0,  'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 0,  'AB': 0, 'O': 60}
+}
+
+distribute_blood({'A': 40, 'B': 30, 'AB': 30, 'O': 40}, {'A': 30, 'B': 35, 'AB': 45, 'O': 30}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 10, 'O': 0},
+   'B': {'A': 0,  'B': 30, 'AB': 0,  'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 5,  'AB': 5,  'O': 30}
+}
+
+</pre>
+
+<p class="for_info_only" style="text-align: justify;">
+   <strong>Jak jest używany:</strong>
+    Ta misja koncentruje się na efektywnej dystrybucji dostępnych ilości krwi w celu zaspokojenia potrzeb pacjentów w oparciu o zgodność.
+    Funkcja `distribute_blood` oblicza odpowiednią alokację krwi, przestrzegając ograniczeń zgodności.
+    Wykonując tę misję, uzyskają Państwo wgląd w efektywne algorytmy dystrybucji krwi i ich praktyczne zastosowania.
+</p>
+
+
+<p class="for_info_only">
+   <strong>Warunki wstępne</strong><br/> 
+    0 &le; ilość krwi;<br/>
+    0 &le; zapotrzebowanie na krew. 
+</p>
+
