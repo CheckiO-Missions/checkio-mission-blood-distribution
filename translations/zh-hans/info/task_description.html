@@ -1,0 +1,57 @@
+
+<p style="text-align: justify;">
+  你的任务是将不同类型的血液分配给需要输血的病人，同时考虑到每种血型的相容性限制。
+  血液供应并不总能满足所有需求。您将获得每种血型的数量和每种病人的需求。
+  您的目标是在遵守配血规则的前提下优化分配可用血液。
+  请记住，可能会有多个最佳解决方案，即最大限度地利用现有血液供应的方案。
+</p>
+<p>兼容性限制：</p>
+<p style="text-align: center;">
+  <img  title="example" src="{{MEDIA}}blood-distr.svg" alt="example" style="max-height: 250px"/>
+</p>
+
+<p>
+   <strong>输入：</strong>每种血型的血液数量<em>（blood_avail</em>）和血液需求<em>（blood_needs</em>），作为{% if is_js %}地图对象{% else %}字典<span>(dict)</span>{% endif %} ，字符串键 (<span>str{% if is_js %}ing{% endif %}</span>) 和整数值 (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+
+<p>
+   <strong>输出：</strong>输出结果将是每种血型的血量分布，如{% if is_js %}地图对象的地图对象{% else %}字典的字典<span>(dict)</span>{% endif %} ，字符串键 ( ) 和整数值 ( ) 。<span>str{% if is_js %}ing{% endif %}</span>) 和整数值 (<span>{% if is_js %}number{% else %}int{% endif %}</span>).
+</p>
+
+<p>
+    <strong>示例</strong>
+</p>
+<pre class="brush: python">
+distribute_blood({'A': 30, 'B': 60, 'AB': 30, 'O': 60}, {'A': 30, 'B': 40, 'AB': 50, 'O': 60}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 0,  'O': 0},
+   'B': {'A': 0,  'B': 40, 'AB': 20, 'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 0,  'AB': 0, 'O': 60}
+}
+
+distribute_blood({'A': 40, 'B': 30, 'AB': 30, 'O': 40}, {'A': 30, 'B': 35, 'AB': 45, 'O': 30}) == 
+{
+   'A': {'A': 30, 'B': 0,  'AB': 10, 'O': 0},
+   'B': {'A': 0,  'B': 30, 'AB': 0,  'O': 0},
+  'AB': {'A': 0,  'B': 0,  'AB': 30, 'O': 0},
+   'O': {'A': 0,  'B': 5,  'AB': 5,  'O': 30}
+}
+
+</pre>
+
+<p class="for_info_only" style="text-align: justify;">
+   <strong>如何使用：</strong>
+    该任务的重点是根据兼容性有效分配可用血量，以满足病人的需求。
+    函数 "distribute_blood "会计算适当的血液分配，同时尊重兼容性限制。
+    通过完成本任务，您将深入了解高效血液分配算法及其实际应用。
+</p>
+
+
+<p class="for_info_only">
+   <strong>前提条件：</strong><br/> 
+    0 &le; 血液数量；<br/>
+    0 &le; 血液需求。 
+</p>
+
